@@ -4,27 +4,27 @@ import ballerinax/java.jdbc;
 import ballerina/io;
 import ballerina/'lang\.int as integer;
 
-type Product record {
+type Product record {|
     int id;
     string name;
     float price;
-};
+|};
 
-type Order record {
+type Order record {|
     int id;
     float total;
     boolean processed = false;
     Product[] products;
-};
+|};
 
-type Inventory record {
+type Inventory record {|
     int productId;
     int stock;
-};
+|};
 
-type OrderEntry record {
+type OrderEntry record {|
     int productId;
-};
+|};
 
 @http:ServiceConfig {
     basePath: "/OrderService"
